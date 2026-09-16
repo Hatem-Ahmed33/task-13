@@ -1,0 +1,30 @@
+# Indexing
+
+Indexing is a technique used in databases to make searching for data faster. An index works like an index in a book. Instead of searching through every row in a table, the database can use the index to find the required data more quickly.
+
+For example, an index can be created on an `email` column when we often search for users by their email.
+
+```sql
+CREATE INDEX idx_email
+ON users(email);
+```
+
+Indexes can improve query performance, but they also require additional storage and can make `INSERT`, `UPDATE`, and `DELETE` operations slightly slower.
+
+# SQL and NoSQL Databases
+
+**SQL databases** are relational databases that store data in tables with rows and columns. They usually use SQL (Structured Query Language) to manage and query data. Examples include MySQL, PostgreSQL, and SQL Server.
+
+**NoSQL databases** are non-relational databases. They can store data in different formats such as documents, key-value pairs, graphs, or wide-column structures. Examples include MongoDB, Redis, and Cassandra.
+
+### Main Difference
+
+| SQL | NoSQL |
+|---|---|
+| Uses tables | Uses different data models |
+| Usually has a fixed schema | Usually has a flexible schema |
+| Uses SQL | Uses database-specific query methods |
+| Good for structured data | Good for flexible or rapidly changing data |
+| Supports relationships between tables | Often designed to scale horizontally |
+
+Both SQL and NoSQL databases are useful. The choice depends on the type of data and the requirements of the application.
